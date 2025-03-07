@@ -21,7 +21,7 @@ VisionSort-RPi is a DIY conveyor belt system designed to showcase real-world app
 ---
 
 ## 📐 3D Model Preview 
-![3D Model] (Images/View1.jpg)
+<img src="Images/View1.jpg" alt="3D Model" width="500"/>
 
 ---
 
