@@ -1,5 +1,5 @@
-![Work in Progress](https://img.shields.io/badge/status-work--in--progress-yellow)
-![Beta](https://img.shields.io/badge/Stage-Beta-orange)
+[![GitHub Pages](https://img.shields.io/badge/Live%20Docs-GitHub%20Pages-blue?logo=github)](https://gbr-rl.github.io/VisionSort-RPi/)
+
 ![Computer Vision](https://img.shields.io/badge/Project-Computer%20Vision-blue)
 ![Embedded Systems](https://img.shields.io/badge/Project-Embedded%20Systems-green)
 ![Image Processing](https://img.shields.io/badge/Project-Image%20Processing-yellow)
@@ -8,97 +8,206 @@
 ![ONNX](https://img.shields.io/badge/ONNX-Inference-purple)
 ![YOLOv8](https://img.shields.io/badge/YOLO-v8-orange)
 ![Raspberry Pi](https://img.shields.io/badge/Hardware-Raspberry%20Pi-red)
+![Status](https://img.shields.io/badge/Project%20Status-Completed-success)
 
+# VisionSort-RPi 
+**An AI-Powered Conveyor Belt Sorting System Using Raspberry Pi + YOLOv8 + Hailo**
 
-# VisionSort-RPi 🚀  
-An intelligent conveyor belt sorting system powered by computer vision and Raspberry Pi. This project combines hardware engineering, object detection, and creative problem-solving to efficiently sort Bolts and Nuts.
-
----
-
-## 🔍 Overview  
-VisionSort-RPi is a DIY conveyor belt system designed to showcase real-world applications of embedded systems and AI. Built using a **Raspberry Pi 5**, **YOLOv8 object detection**, **Hailo AI acceleration**, and custom hardware, the project automates sorting tasks like distinguishing between **Bolts and Nuts** with enhanced inference performance.  
+A real-time bolt-and-nut sorting system powered by computer vision and embedded AI. This project blends hardware engineering with object detection and real-world automation — combines hardware engineering, object detection, and creative problem-solving to efficiently sort Bolts and Nuts.
 
 ---
 
-## 📐 3D Model Preview 
-<img src="Images/View1.jpg" alt="3D Model" width="500"/>
+## Overview
+
+**VisionSort-RPi** is an edge-deployed conveyor belt system that showcases real-world applications of embedded AI.  
+Built using **Raspberry Pi 5**, **YOLOv8**, and the **Hailo AI accelerator**, it automates object classification and sorting tasks with high accuracy and speed.
 
 ---
 
-## 🎯 Features  
-- **Real-Time Object Detection**: Detects and classifies objects on the conveyor belt using YOLOv8 with Hailo AI acceleration.  
-- **Hardware Integration**: Includes NEMA 17 stepper motors for conveyor belt movement and MG996R servo motors for sorting mechanisms.  
-- **Custom Dataset Utilization**: Utilizes a pre-annotated dataset of over 9000 images with bounding box labels.  
-- **High-Performance Inference**: Leverages the **Hailo AI Kit** to accelerate neural network inference, improving real-time detection efficiency.  
-   
+## 🖼️ 3D Model & Real Conveyor Sorting System
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>3D CAD Model</strong><br>
+      <img src="Images/View1.jpg" alt="3D CAD Model" width="400"/>
+    </td>
+    <td align="center">
+      <strong>Real Conveyor System</strong><br>
+      <img src="Images/Real_System1.jpg" alt="Conveyor Sorting System" width="400"/>
+    </td>
+  </tr>
+</table>
+
+> _Side-by-side view of the designed CAD model and the actual built system with camera and flapper mounted._
+
+
+## 🎯 Key Features
+
+- ✅ **Real-Time Object Detection** with YOLOv8 + Hailo for bolts and nuts
+- ✅ **Stepper + Servo Motor Integration** for precise movement and sorting
+- ✅ **Edge Deployment** on Raspberry Pi 5 with hardware-accelerated inference
+- ✅ **Custom Dataset** with over 9,000 annotated training images
+- ✅ **Optimized for speed** using neural network acceleration (Hailo RT)
+- ✅ **Fully Autonomous Sorting** with no human-in-the-loop
+
 ---
 
 ## 🛠️ Tech Stack
-1. **Hardware**: Raspberry Pi 5, Stepper Motors, Servo Motors, Hailo AI Kit, Raspberry Pi HQ Camera, 16mm 10MP Telephoto Lens for Raspberry Pi HQ Camera.  
-2. **Computer Vision**: YOLOv8 for object detection.  
-3. **Software Tools**:  
-   - Python (Primary language)  
-   - OpenCV (Image preprocessing)  
-4. **AI Training**: Trained YOLOv8 models on a pre-annotated dataset.  
-5. **Deployment**: Edge inference on Raspberry Pi using Hailo AI Kit for improved processing speed.  
 
-
----
-
-## 🔧 Project Architecture
-1. **Data Preparation**:  
-   - Used a pre-annotated dataset from **Roboflow**, containing over 9000 images.  
-   - The dataset was split into three sets: **Training**, **Validation**, and **Testing**.  
-   - Bounding box labels around objects were created using in-built annotation features available in Roboflow.  
-
-2. **Model Training**:  
-   - Trained YOLOv8 models on an HPC for optimal detection.  
-
-3. **Hardware Setup**:  
-   - Designed a conveyor belt with Raspberry Pi for edge processing.  
-   - Integrated stepper and servo motors for automation.
-   - Used a **16mm 10MP Telephoto Lens** with the **Raspberry Pi HQ Camera** for precise image capture.  
-
-4. **Deployment**:  
-   - Deployed YOLOv8 on the Raspberry Pi 5 for real-time object classification and sorting.
-   - Optimized inference performance using the **Hailo AI Kit**, leveraging its neural network accelerator for high-speed processing.  
+| Category         | Tools & Hardware                               |
+|------------------|-------------------------------------------------|
+| 🧠 CV/AI          | YOLOv8, Roboflow, Python, OpenCV               |
+| ⚙️ Embedded HW    | Raspberry Pi 5, Hailo AI Kit, NEMA 17, MG996R Servo  |
+| 📷 Camera         | Raspberry Pi HQ Camera + 16mm 10MP Telephoto   |
+| 🔌 Communication  | GPIO, PWM, I2C                                 |
+| 📦 Dataset        | Roboflow custom-labeled (9000+ images)         |
 
 ---
 
-## 🚀 How to Run
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/VisionSort-RPi.git
-   cd VisionSort-RPi
-   ```
+## 🧱 Mechanical Components & CAD
 
-2. Install dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```
+This project includes custom-designed mechanical components modeled in Creo Parametric and fabricated using 3D printing. Key components include:
 
-3. Run the system:  
-   ```bash
-   python main.py
-   ```
+- Flapper mechanism for nut/bolt sorting
+- Servo mounting bracket
+- RPi HQ camera holder
 
-4. Place objects on the conveyor belt and watch the sorting in action! 🎉
+🔗 View CAD designs & prints in [`CAD/`](./CAD)  
+📄 Download full BOM: [`BOM.xlsx`](./CAD/BOM.xlsx)  
+📤 External CAD repo: [GrabCAD – VisionSort-RPi](https://grabcad.com/library/visionsort-rpi-custom-cad-parts-1)
+
+📦 Download 3D printable CAD models:
+➡️ [GitHub Release: CAD v1.0](https://github.com/GBR-RL/VisionSort-RPi/releases)
 
 ---
 
-## 🛠️ Skills Demonstrated
-1. **Embedded Systems**: Designed and controlled hardware with Raspberry Pi and motors.  
-2. **Computer Vision**: Trained and deployed AI models for object detection.  
-3. **Data Science**: Utilized a pre-annotated dataset for model training.  
-4. **Creative Engineering**: Built a functional DIY sorting system from scratch.  
+## 🧠 Project Architecture
+
+### 🔧 Hardware Design
+- Conveyor belt driven by **NEMA 17 stepper motor**
+- **Servo-controlled deflector arm** for object redirection
+- HQ Camera with a **16mm telephoto lens** for accurate detection
+- All powered and controlled via **Raspberry Pi 5**
+
+### 🧪 Data + AI
+- Pre-annotated dataset from **Roboflow**
+- Bounding box labels with `nut` and `bolt` classes
+- Trained on HPC using YOLOv8 custom config
+- Inference optimized with **Hailo RT SDK**
 
 ---
 
-## 🙌 Future Improvements
-- Further optimize model accuracy and speed using advanced quantization techniques.  
+### 🧰 Software Pipeline
+
+1. **Camera Frame Capture** → 
+2. **Image Preprocessing (OpenCV)** →
+3. **YOLOv8 Inference (Hailo AI)** →
+4. **Object Classification** →
+5. **Motor Control Signal** →
+6. **Stepper + Servo Movement**
+
+---
+
+## ⚙️ Setup Instructions
+
+### 🔧 Hailo AI Environment Setup
+
+This project utilizes **Hailo’s AI acceleration platform** for deploying YOLOv8 models on the Raspberry Pi 5.  
+You can find the environment setup in their [official repo](https://github.com/hailo-ai/hailo-rpi5-examples).
+
+#### 🛠️ Installation Steps
+
+```bash
+git clone https://github.com/hailo-ai/hailo-rpi5-examples.git
+cd hailo-rpi5-examples
+./install.sh
+```
+
+Every time you open a new terminal session, activate the environment:
+
+```bash
+source setup_env.sh
+```
+
+---
+
+### 🚀 Running the Conveyor Sorting System
+
+Run the real-time detection and sorting application using:
+
+```bash
+python detection/detection.py \
+  --labels-json resources/nut_bolt-labels.json \
+  --hef-path model/nut_bolt_model.hef \
+  --input rpi
+```
+
+> Press `Ctrl+C` to stop the system gracefully.
+
+---
+
+## 🔌 Hardware Wiring Diagram
+
+The wiring for the stepper and servo motor system was meticulously crafted for precise control and safety.  
+Key components include the **TMC2208 stepper driver**, **MG996R servo motor**, **buck converter**, and **external 12V power supply**.
+
+### 📄 Wiring Summary
+
+| Component             | Raspberry Pi GPIO           | Notes                              |
+|----------------------|-----------------------------|-------------------------------------|
+| **TMC2208 - STEP**    | GPIO17 (Pin 11)             | Step signal                         |
+| **TMC2208 - DIR**     | GPIO27 (Pin 13)             | Direction signal                    |
+| **TMC2208 - EN**      | GND                         | Must be LOW to enable               |
+| **TMC2208 - VIO**     | 3.3V                        | Logic level                         |
+| **TMC2208 - GND**     | GND                         |                                     |
+| **MG996R - SIGNAL**   | GPIO12 (PWM)                | Servo control via PWM               |
+| **Servo Vcc**         | Buck Converter 5V           | Ensure stable 5V using multimeter   |
+| **Buck Converter Input** | 12V external supply      | Powers motors + regulated 5V output |
+
+📎 Full schematic is detailed in [`docs/Wiring_Setup.pdf`](docs/Wiring_Setup.pdf)
+
+---
+
+## 🧠 Training the YOLOv8 Model
+
+The model used in this project is a **fine-tuned YOLOv8n** trained on a **custom Roboflow dataset** (9000+ images).
+
+📜 Training script used: [`training.py`](training.py)
+
+- Based on YOLOv8n.pt pretrained weights
+- Trained to detect only two classes: `bolt` and `nut`
+- Handled augmentation, batch balancing, and early stopping
+
+---
+
+## 🔄 Model Conversion for Hailo Deployment
+
+YOLOv8 `.pt` model was converted to Hailo-compatible `.hef` format using the **Hailo Dataflow Compiler (DFC)**.
+
+📓 Conversion steps are documented in [`Convert_YoloV8_to_HEF.ipynb`](Convert_YoloV8_to_HEF.ipynb)
+
+### 🔁 Pipeline
+- `.pt` → `.onnx` via Ultralytics export
+- `.onnx` → `.hef` using Hailo’s `hef-generator` script
+
+📚 Guide followed: [Guide to Using Hailo DFC](https://community.hailo.ai/t/guide-to-using-the-dfc-to-convert-a-modified-yolov11-on-google-colab/7131)
+
+---
+
+## 📽️ System Demonstration
+
+> ⚙️ Real-time sorting demo using computer vision and Raspberry Pi:
+
+🎥 [![VisionSort Demo](https://img.youtube.com/vi/cI-RrebKUd8/hqdefault.jpg)](https://www.youtube.com/watch?v=cI-RrebKUd8)
+
+---
+
+## 🛠️ What's Next?
+
+- Add camera calibration + lighting normalization
 - Expand dataset to include more object categories for diverse sorting applications.  
-- Integrate IoT for remote monitoring.    
-
+- Integrate IoT for remote monitoring. 
 ---
 
 ## 📩 Contact
