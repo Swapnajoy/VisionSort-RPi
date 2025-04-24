@@ -212,9 +212,9 @@ YOLOv8 `.pt` model was converted to Hailo-compatible `.hef` format using the **H
 
 ## 📩 Contact
 I’m excited to connect and collaborate!  
-- **Email**: [gbrohiith@gmail.com](mailto:your.email@example.com)  
-- **LinkedIn**: [https://www.linkedin.com/in/rohiithgb/](https://linkedin.com/in/yourprofile)  
-- **GitHub**: [https://github.com/GBR-RL/](https://github.com/yourusername)
+- **Email**: [swapnajoy.saha@rwth-aachen.de](mailto:your.email@example.com)  
+- **LinkedIn**: [www.linkedin.com/in/swapnajoy-saha-375103171](https://linkedin.com/in/yourprofile)  
+- **GitHub**: [https://github.com/Swapnajoy](https://github.com/yourusername)
 
 ---
 
